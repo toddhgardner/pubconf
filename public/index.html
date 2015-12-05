@@ -6,61 +6,147 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>PubConf</title>
   <meta name="description" content="">
+
+  <!-- TODO Social Graph Tags -->
+  <!-- TODO Async google fonts -->
+
   <link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
   <style>
+    /* General Layout */
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       font-family: 'Oxygen', sans-serif;
       min-width: 320px;
+      background-color: #222;
+      font-size: 1.0em;
+      line-height: 1.8em;
     }
+    .wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      color #333;
+    }
+
+    /* Typography */
     a {
       color: #FF7461;
       text-decoration: none;
+      transition: color 300ms ease 0s;
     }
     a:hover,a:active,a:focus{
       color: #FFA69B;
       text-decoration: underline;
     }
-    .main-wrap {
+    .text-lg { font-size: 1.4em;line-height: 1.4em; }
+    .text-center { text-align: center; }
+    .text-muted { color: #555; }
+
+    /* Main Navigation */
+    nav {
+      background-color: #222;
+      color:#eee;
       text-align: center;
-      color #333;
     }
-    .main-wrap:after {
-      content: "";
-      display: block;
+    nav ul {
+      list-style: none;
+      display: inline-block;
+      margin: 4px auto;
+      padding: 0
     }
+    nav li {
+      text-align: center;
+      display: inline;
+      margin:10px 6px;
+      padding: 0;
+    }
+    nav li a { color: #eee;}
 
-    .place {
-      font-size: 32px;
-      line-height: 36px;
-      color: #444;
+    /* Sections */
+    .section-light {
+      background-color: white;
+      width: 100%;
+      padding: 20px 0;
+      color: #222;
     }
-    .time {
-      font-size: 22px;
-      line-height: 26px;
-      color: #555;
-    }
-
-    .about {
+    .section-decor {
+      box-shadow: inset 0px  8px 8px -5px rgba(0,0,0,0.8),
+                  inset 0px -8px 8px -5px rgba(0,0,0,0.8);
       background: url(img/bar1.jpg) no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
-
       width: 100%;
-      margin-top: 80px;
       padding: 60px 0;
-    }
-    .about p {
       color: #eee;
-      text-align: center;
-      font-size: 22px;
-      font-weight: normal;
-      line-height: 32px;
+      font-weight: 700;
     }
+    .section-hero {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    /* Talk Lists */
+    .talk-theme-col:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .talk-col-1,
+    .talk-col-2 {
+      float: left;
+      padding-left: 30px;
+      width: -webkit-calc(50% - 30px);
+      width:         calc(50% - 30px);
+    }
+    .talk-col-3 {
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 800px) {
+      .talk-col-1,
+      .talk-col-2,
+      .talk-col-3 {
+        padding-left: 15px;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    .talk-theme {}
+    .talk-theme h3 {
+      text-align: center;
+      border-bottom: 1px solid #FFB061;
+      padding-bottom: 10px;
+      border-image: linear-gradient(to right,transparent,#FFB061 31.91489%,#FFB061 68.08511%,transparent) 0 0 100% 0;
+    }
+    .talk-theme ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .talk-theme li {
+
+    }
+    .talk-theme img { float: left;}
+    .talk-theme .talk-content { margin-left: 120px; min-height: 120px;}
+    .talk-theme h4 {
+      font-weight: 700;
+      font-size: 1.2em;
+      margin: 0;
+      padding: 0;
+    }
+    .talk-theme h5 {
+      font-weight: 300;
+      font-size: 1.1em;
+      margin: 0;
+      padding: 0;
+    }
+
+
 
     .subscribe {
       max-width: 560px;
@@ -173,24 +259,141 @@
   </style>
 </head>
 <body>
-  <div class="main-wrap">
-    <div class="main">
-      <div style="padding-top:80px;"><img src="img/logo.gif" alt="PubConf" width="320"/></div>
-      <div class="tagline slide-in">
-        <div class="place">
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#speakers">Speakers</a></li>
+        <li><a href="#venue">Venue</a></li>
+        <li><a href="#tickets">Tickets</a></li>
+        <li><a href="#sponsors">Sponsors</a></li>
+        <li><a href="/discussion.html">Discussion</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section-light section-hero">
+    <div class="wrapper">
+      <img src="img/logo.gif" alt="PubConf" width="320"/>
+      <div class="slide-in">
+        <div>
           <small style="vertical-align:top;font-size:14px;line-height:32px;">at</small>
           <a href="http://ndc-london.com" target="_blank">
             <img src="img/ndc-black.png" alt="NDC London" style="max-height:30px;">
           </a>
         </div>
-        <div class="time">January 16, 2016</div>
+        <div class="text-muted text-lg">January 16, 2016</div>
       </div>
-      <section class="about">
-        <div class="fade-in">
-          <p>Not quite a conference; <br>Not exactly an afterparty; <br>Inspirational conversations with amazing developers.</p>
-          <p>Creating developer communities, one beverage at a time.</p>
+    </div>
+  </section>
+
+  <section class="section-decor section-about">
+    <div class="wrapper">
+      <div class="fade-in text-center text-lg">Rapid-fire Ignite talks from inspirational developers in the relaxed atmosphere of The Pepys pub, PubConf will be a uniquely entertaining and insightful event. <br><br>You won't want to miss it.</div>
+    </div>
+  </section>
+
+  <section class="section-light section-speakers">
+    <div class="wrapper">
+      <h2 id="speakers" class="text-center" style="margin:6px 0">Speakers and Talks</h2>
+      <div class="text-center">PubConf's Ignite talks are currated on these themes, relevant to us all: Managing yourself today, looking ahead at the future of "Computering", and ranting about broken things.</div>
+
+      <div class="talk-theme-col">
+        <div class="talk-theme talk-col-1">
+          <h3>Managing Yourself</h3>
+          <ul>
+            <li>
+              <img src="img/speakers/anonymous.png" width="100px" height="100px" alt="Speaker Name">
+              <div class="talk-content">
+                <h4>Talk Title</h4>
+                <h5>Speaker Name</h5>
+                <small>Blerb about talk or speaker</small>
+              </div>
+            </li>
+            <li>
+              <img src="img/speakers/anonymous.png" width="100px" height="100px" alt="Speaker Name">
+              <div class="talk-content">
+                <h4>Talk Title</h4>
+                <h5>Speaker Name</h5>
+                <small>Blerb about talk or speaker</small>
+              </div>
+            </li>
+            <li>
+              <img src="img/speakers/anonymous.png" width="100px" height="100px" alt="Speaker Name">
+              <div class="talk-content">
+                <h4>Talk Title</h4>
+                <h5>Speaker Name</h5>
+                <small>Blerb about talk or speaker</small>
+              </div>
+            </li>
+          </ul>
         </div>
-      </section>
+        <div class="talk-theme talk-col-2">
+          <h3>The Future of Computering</h3>
+          <ul>
+            <li>
+              <img src="img/speakers/anonymous.png" width="100px" height="100px" alt="Speaker Name">
+              <div class="talk-content">
+                <h4>Talk Title</h4>
+                <h5>Speaker Name</h5>
+                <small>Blerb about talk or speaker</small>
+              </div>
+            </li>
+            <li>
+              <img src="img/speakers/anonymous.png" width="100px" height="100px" alt="Speaker Name">
+              <div class="talk-content">
+                <h4>Talk Title</h4>
+                <h5>Speaker Name</h5>
+                <small>Blerb about talk or speaker</small>
+              </div>
+            </li>
+            <li>
+              <img src="img/speakers/anonymous.png" width="100px" height="100px" alt="Speaker Name">
+              <div class="talk-content">
+                <h4>Talk Title</h4>
+                <h5>Speaker Name</h5>
+                <small>Blerb about talk or speaker</small>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="talk-theme talk-col-3">
+        <h3>Everything is Wrong <small class="text-muted"><br>(and nobody cares)</small></h3>
+        <ul>
+          <li>
+            <img src="img/speakers/anonymous.png" width="100px" height="100px" alt="Speaker Name">
+            <div class="talk-content">
+              <h4>Talk Title</h4>
+              <h5>Speaker Name</h5>
+              <small>Blerb about talk or speaker</small>
+            </div>
+          </li>
+          <li>
+            <img src="img/speakers/anonymous.png" width="100px" height="100px" alt="Speaker Name">
+            <div class="talk-content">
+              <h4>Talk Title</h4>
+              <h5>Speaker Name</h5>
+              <small>Blerb about talk or speaker</small>
+            </div>
+          </li>
+          <li>
+            <img src="img/speakers/anonymous.png" width="100px" height="100px" alt="Speaker Name">
+            <div class="talk-content">
+              <h4>Talk Title</h4>
+              <h5>Speaker Name</h5>
+              <small>Blerb about talk or speaker</small>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+
+
+  </section>
+
       <section class="subscribe">
         <p>The next PubConf is distilling. Leave us your email and we'll let you know when the drinks are ready.</p>
         <!-- Begin MailChimp Signup Form -->
@@ -228,8 +431,6 @@
           </div>
         </div>
       </section>
-    </div>
-  </div>
   <footer>
     <div class="footer-wrap">
       <p>PubConf is a project by <a href="http://todd.mn/">Todd H Gardner</a>.</p>
