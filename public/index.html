@@ -27,6 +27,7 @@
   <meta name="twitter:description" content="Rapid-fire Ignite talks from inspirational developers in the relaxed atmosphere of The Pepys pub, PubConf will be a uniquely entertaining and insightful event.">
   <meta name="twitter:site" content="@trackjs">
 
+  <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAC18PcAAAAAAMfn6wDg+/8AAH3jAADD/wD/fUoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYRERERERZmZmFERERBZmZmYUEUEUFmZmZhQUQUQWZmZmFBRBRBERZmYVFVFVEAAWZhUVUVUREBZmFRVRVRYQFmYVFVFVERAWYhUVUVUQABYjFRVRVRERZiMTMyMzEzZmYhMzMjMTZmZiMyMyMzJmZmYjMjMyNmZmZmIzIzNmZmYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon" />
   <link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
   <style>
     /* General Layout */
@@ -62,6 +63,22 @@
     .text-muted { color: #555; }
     .pull-left {float:left;}
     .pull-right {float:right;}
+    .button {
+      background-color: #ff7461;
+      color: #eee;
+      padding: 8px 24px;
+      border-radius: 2px;
+      font-weight: 700;
+      border: 1px solid #8D1303;
+      transition: background-color 300ms ease 0s;
+    }
+    .button:hover,
+    .button:active,
+    .button:focus {
+      background-color: #8D1303;
+      color: #eee;
+      text-decoration: none;
+    }
 
     /* Main Navigation */
     nav {
@@ -370,7 +387,7 @@
   <section class="section-light section-speakers">
     <div class="wrapper">
       <h2 id="speakers" class="text-center" style="margin:6px 0">Speakers and Talks</h2>
-      <div class="text-center text-lg">PubConf's Ignite talks are currated on these themes, relevant to us all: Managing yourself today, looking ahead at the future of "Computering", and ranting about broken things.</div>
+      <div class="text-center text-lg">PubConf's Ignite talks will be presented in a single track, curated on themes relevant to us all: managing yourself today, looking ahead at the future of "Computering", and ranting about broken things.</div>
 
       <div class="talk-theme-col" style="margin-top: 20px;">
         <div class="talk-theme talk-col-1">
@@ -487,7 +504,7 @@
             <img src="img/speakers/liam.jpg" width="100px" height="100px" alt="Liam Westley">
             <div class="talk-content">
               <h4>What Is the Point Of Microsoft?</h4>
-              <h5><a href="http://geekswithblogs.net/twickers">Liam Westleliamy</a></h5>
+              <h5><a href="http://geekswithblogs.net/twickers">Liam Westley</a></h5>
               <div class="talk-desc"><small>Application Architect at Huddle</small></div>
             </div>
           </li>
@@ -616,8 +633,10 @@
         <br>
         <div class="pull-right text-muted ticket-release"><strong>Late December</strong></div>
         <h3>Early Release Tickets</h3>
-        <div>The second batch of tickets will be released to our mailing list. <a href="#subscribe"><strong>Subscribe now</strong></a> and you'll be one of the first to know when they are available.</div>
-        <br>
+        <div>The second batch of tickets will be released to our mailing list. Get on the list and you'll be one of the first to know when they are available.</div>
+        <div class="text-center" style="margin:10px 0;line-height:40px;">
+          <a href="http://eepurl.com/bGEiOH" class="button">Subscribe now</a>
+        </div>
         <div class="pull-right text-muted ticket-release"><strong>January 12th</strong></div>
         <h3>General Tickets</h3>
         <div>The final batch of tickets will be released at the Start of the NDC Conference on January 12th. Links will be available here, <a href="https://twitter.com/pubconf">twitter</a>, and the <a href="#subscribe">mailing list</a>.</div>
