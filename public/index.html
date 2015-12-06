@@ -27,6 +27,7 @@
       max-width: 960px;
       margin: 0 auto;
       color #333;
+      padding: 0 15px;
     }
 
     /* Typography */
@@ -42,6 +43,8 @@
     .text-lg { font-size: 1.4em;line-height: 1.4em; }
     .text-center { text-align: center; }
     .text-muted { color: #555; }
+    .pull-left {float:left;}
+    .pull-right {float:right;}
 
     /* Main Navigation */
     nav {
@@ -67,7 +70,7 @@
     .section-light {
       background-color: white;
       width: 100%;
-      padding: 20px 0;
+      padding: 40px 0;
       color: #222;
     }
     .section-decor {
@@ -87,6 +90,108 @@
       padding: 80px 0;
       text-align: center;
     }
+    .section-subscribe {
+    }
+    .section-subscribe h2 {
+      margin: 0 0 10px;
+    }
+    .section-subscribe input {
+      display: block;
+      margin: 0 auto 0;
+      width: 240px;
+      font-size: 1.2em;
+      vertical-align: bottom;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 2px;
+    }
+    .section-subscribe input[type=submit] {
+      width: 262px;
+      background-color: #408EA0;
+      border: 1px solid #044757;
+      color: #eee;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+    .section-venue .wrapper { max-width: 720px;}
+    .section-venue .venue-image {
+      float: right;
+    }
+    .section-venue .venue-info {
+      margin-right: 380px;
+      min-height: 360px;
+    }
+    .section-venue .venue-address {
+      margin-top: 30px;
+      line-height: 1.1em;
+    }
+    @media screen and (max-width: 720px) {
+      .section-venue .venue-image,
+      .section-venue .venue-info {
+        margin: 0;
+        min-height: auto;
+        float: none;
+        display: block;
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 360px) {
+      .section-venue .venue-image img {
+        max-width: 100%;
+      }
+    }
+    .section-schedule {
+    }
+    .section-schedule .schedule-wrap {
+      max-width: 480px;
+      margin: 20px auto;
+      border-bottom: 1px solid #FFB061;
+      border-top: 1px solid #FFB061;
+      padding: 10px 0;
+      border-image: linear-gradient(to right,transparent,#FFB061 31.91489%,#FFB061 68.08511%,transparent) 100% 0 100% 0;
+    }
+    .section-schedule .schedule-wrap strong {
+      display: block;
+      margin-left: 80px;
+    }
+    .section-tickets {
+    }
+    .section-tickets .ticket-types {
+      max-width: 640px;
+      margin: 20px auto;
+      border-bottom: 1px solid #FFB061;
+      border-top: 1px solid #FFB061;
+      padding: 10px 0;
+      border-image: linear-gradient(to right,transparent,#FFB061 31.91489%,#FFB061 68.08511%,transparent) 100% 0 100% 0;
+    }
+    .section-tickets .ticket-release {
+      margin: 18px 0;
+    }
+    .section-sponsors {}
+    .section-sponsors .sponsor-wrap {
+      margin-top: 40px;
+    }
+    .section-sponsors .sponsor-wrap:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .section-sponsors .sponsor-wrap .sponsor{
+      float: left;
+      padding-left: 30px;
+      width: -webkit-calc(50% - 30px);
+      width:         calc(50% - 30px);
+    }
+    @media screen and (max-width: 600px) {
+      .section-sponsors .sponsor-wrap .sponsor {
+        margin: 40px 0 0;
+        padding: 0;
+        min-height: auto;
+        float: none;
+        display: block;
+        width: 100%;
+      }
+    }
 
     /* Talk Lists */
     .talk-theme-col:after {
@@ -105,7 +210,6 @@
       max-width: 480px;
       margin: 0 auto;
     }
-
     @media screen and (max-width: 800px) {
       .talk-col-1,
       .talk-col-2,
@@ -115,7 +219,6 @@
         max-width: 100%;
       }
     }
-
     .talk-theme {}
     .talk-theme h3 {
       text-align: center;
@@ -148,53 +251,6 @@
 
 
 
-    .subscribe {
-      max-width: 560px;
-      margin: 0 auto 0;
-      padding: 40px 10px;
-      font-size: 22px;
-      font-weight: normal;
-      line-height: 32px;
-    }
-    input {
-      font-size: 18px;
-      vertical-align: bottom;
-      padding: 4px 10px;
-      border: 1px solid #8D1303;
-      border-radius: 2px;
-    }
-    input.button {
-      line-height: 18px;
-      background-color: #DF3A24;
-      border: 1px solid #8D1303;
-      border-radius: 2px;
-      color: #eee;
-      padding: 6px 12px;
-    }
-    .twitter {
-      margin-top: 40px;
-    }
-
-    .sponsors {
-      background: url(img/bar2.jpg) no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-
-      width: 100%;
-      padding: 30px 0;
-    }
-    .sponsors > * {
-      color: #eee;
-      text-align: center;
-      font-size: 22px;
-      font-weight: normal;
-      line-height: 32px;
-    }
-    .sponsor {
-      margin: 20px;
-    }
 
     footer {
       background-color: #222;
@@ -265,6 +321,7 @@
       <ul>
         <li><a href="#speakers">Speakers</a></li>
         <li><a href="#venue">Venue</a></li>
+        <li><a href="#schedule">Schedule</a></li>
         <li><a href="#tickets">Tickets</a></li>
         <li><a href="#sponsors">Sponsors</a></li>
         <li><a href="/discussion.html">Discussion</a></li>
@@ -296,9 +353,9 @@
   <section class="section-light section-speakers">
     <div class="wrapper">
       <h2 id="speakers" class="text-center" style="margin:6px 0">Speakers and Talks</h2>
-      <div class="text-center">PubConf's Ignite talks are currated on these themes, relevant to us all: Managing yourself today, looking ahead at the future of "Computering", and ranting about broken things.</div>
+      <div class="text-center text-lg">PubConf's Ignite talks are currated on these themes, relevant to us all: Managing yourself today, looking ahead at the future of "Computering", and ranting about broken things.</div>
 
-      <div class="talk-theme-col">
+      <div class="talk-theme-col" style="margin-top: 20px;">
         <div class="talk-theme talk-col-1">
           <h3>Managing Yourself</h3>
           <ul>
@@ -388,52 +445,153 @@
         </ul>
       </div>
 
-
     </div>
-
-
   </section>
 
-      <section class="subscribe">
-        <p>The next PubConf is distilling. Leave us your email and we'll let you know when the drinks are ready.</p>
-        <!-- Begin MailChimp Signup Form -->
-        <form action="https://pubconf.us11.list-manage.com/subscribe/post?u=33d7399517a3ee3a5e9b679f7&amp;id=05e06dc18c" method="post" target="_blank">
-          <div style="position: absolute; left: -5000px;"><input type="text" name="b_33d7399517a3ee3a5e9b679f7_05e06dc18c" tabindex="-1" value=""></div>
-          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
-          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-        </form>
-        <!--End mc_embed_signup-->
+  <section class="section-decor section-subscribe">
+    <div class="wrapper text-center">
+      <h2 id="subscribe">Don't Miss Out!</h2>
+      <div>Subscribe to our mailing list for updates and ticket releases.</div>
+      <!-- Begin MailChimp Signup Form -->
+      <form style="margin-top:20px" action="https://pubconf.us11.list-manage.com/subscribe/post?u=33d7399517a3ee3a5e9b679f7&amp;id=05e06dc18c" method="post" target="_blank">
+        <div style="position: absolute; left: -5000px;"><input type="text" name="b_33d7399517a3ee3a5e9b679f7_05e06dc18c" tabindex="-1" value=""></div>
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="email address">
+        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+      </form>
+      <!--End mc_embed_signup-->
+    </div>
+  </section>
 
-        <div class="twitter">
-          <a class="twitter-share-button"
-            href="https://twitter.com/intent/tweet?text=PubConf is making me thirsty... Check it out at http://pubconf.io"
-            data-size="large"
-            data-count="none"></a>
-          <a class="twitter-follow-button"
-            href="https://twitter.com/PubConf"
-            data-size="large"
-            data-show-count="false"></a>
+  <section class="section-light section-venue">
+    <div class="wrapper text-center">
+      <h2 id="venue">Venue</h2>
+      <div class="venue-image">
+        <img src="img/thepepys.jpg" alt="The Pepys" width="360px" height="360px">
+      </div>
+      <div class="venue-info">
+        <h3 class="text-center text-lg">The Pepys</h3>
+        <div class="text-center text-lg">Set in a historic warehouse on the north bank of the Thames, The Pepys is a hidden gem in the heart of the City.</div>
+        <div class="venue-address">
+          The Pepys<br>
+          Stew Lane<br>
+          Off Upper Thames Street<br>
+          London EC4V 3PT<br>
+          <a href="https://www.google.co.uk/maps?f=q&source=s_q&hl=en&geocode&q=The+Samuel+Pepys&sll=51.510408,-0.096259&sspn=0.005716,0.004393&vpsrc=6&ie=UTF8&t=m&z=17&iwloc=A&cid=1223154438194395697">Google Map</a>
         </div>
+      </div>
+    </div>
+  </section>
 
-      </section>
-      <section class="sponsors">
-        <div class="fade-in">
-          <p><strong>Partners</strong></p>
-          <div class="sponsor">
-            <a href="http://ndc-london.com" target="_blank">
-              <img src="img/ndc.png" alt="NDC London" style="max-height:25px;">
-            </a>
-          </div>
-          <div class="sponsor">
-            <a href="https://trackjs.com" target="_blank">
-              <img src="img/trackjs.png" alt="TrackJS" style="max-height:50px;">
-            </a>
-          </div>
+  <section class="section-decor">
+    <div class="wrapper text-center text-lg">
+      Building the developer community<br>
+      one beverage at a time.
+    </div>
+  </section>
+
+  <section class="section-light section-schedule">
+    <div class="wrapper">
+      <h2 id="schedule" class="text-center" style="margin:6px 0">Schedule</h2>
+      <div class="text-center text-lg">PubConf's program will be very open, with plenty of time for discussion and socializing. Have a drink and meet chat about something new.</div>
+
+      <div class="text-lg schedule-wrap">
+        <div>
+          <div class="pull-left">16:00</div>
+          <strong>Doors open, open bar</strong>
         </div>
-      </section>
+        <div>
+          <div class="pull-left">17:45</div>
+          <strong>Welcome</strong>
+        </div>
+        <div>
+          <div class="pull-left">18:00</div>
+          <strong>Ignite: Managing Yourself</strong>
+        </div>
+        <div>
+          <div class="pull-left">19:00</div>
+          <strong>Ignite: Future of Computering</strong>
+        </div>
+        <div>
+          <div class="pull-left">20:00</div>
+          <strong>Ignite: Everything is Broken</strong>
+        </div>
+        <div>
+          <div class="pull-left">21:00</div>
+          <strong>Ignite: Karaoke</strong>
+        </div>
+        <div>
+          <div class="pull-left">21:30</div>
+          <strong>Thanks and Social Hours</strong>
+        </div>
+        <div>
+          <div class="pull-left">23:00</div>
+          <strong>Closing Time</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-decor">
+    <div class="wrapper text-center text-lg">
+      Not quite a conferece;<br>
+      Not exactly an afterparty;<br>
+      Inspirational conversations with amazing developers.
+    </div>
+  </section>
+
+  <section class="section-light section-tickets">
+    <div class="wrapper">
+      <h2 id="tickets" class="text-center" style="margin:6px 0">Tickets</h2>
+      <div class="text-lg text-center">Thanks to the generosity of our <a href="#sponsors">Sponsors</a>, PubConf is <strong>free</strong>! That's right, free as in beer. Space is limited, and we'll be releasing tickets in batches.</div>
+
+      <div class="ticket-types">
+        <div class="pull-right text-muted ticket-release"><strong>Available Now</strong></div>
+        <h3>Advanced Tickets</h3>
+        <div>If you purchase a <a href="http://ndc-london.com/">ticket to NDC London</a>, you'll have access to our advanced batch of tickets. Check it out, its an amazing event, and our primary sponsor.</div>
+        <br>
+        <div class="pull-right text-muted ticket-release"><strong>Late December</strong></div>
+        <h3>Early Release Tickets</h3>
+        <div>The second batch of tickets will be released to our mailing list. <a href="#subscribe"><strong>Subscribe now</strong></a> and you'll be one of the first to know when they are available.</div>
+        <br>
+        <div class="pull-right text-muted ticket-release"><strong>January 12th</strong></div>
+        <h3>General Tickets</h3>
+        <div>The final batch of tickets will be released at the Start of the NDC Conference on January 12th. Links will be available here, <a href="https://twitter.com/pubconf">twitter</a>, and the <a href="#subscribe">mailing list</a>.</div>
+        <br>
+      </div>
+
+      <div class="text-lg text-center">All attendees, speakers, and sponsors at PubConf are required to agree and follow the <a href="http://confcodeofconduct.com/">code of conduct</a>. We will enforce this code throughout the event.</div>
+
+    </div>
+  </section>
+
+  <section class="section-decor section-sponsors">
+    <div class="wrapper text-center">
+      <h2 id="sponsors">Sponsors</h2>
+      <div class="text-center">PubConf is possible thanks to the generosity and expertise of our Sponsors. Please visit them and find out more about their awesomeness.</div>
+
+      <div class="sponsor-wrap">
+        <div style="display:block;width:100%;">
+          <a href="http://ndc-london.com" target="_blank" style="display:block;margin-top:60px;">
+            <img src="img/ndc.png" alt="NDC London" width="360px">
+          </a>
+        </div>
+        <div class="sponsor">
+          <a href="https://trackjs.com" target="_blank" style="display:block;margin-top:40px;">
+            <img src="img/trackjs.png" alt="TrackJS" width="240px">
+          </a>
+        </div>
+        <div class="sponsor">
+          <a href="https://www.zopa.com" target="_blank">
+            <img src="img/zopa.png" alt="Zopa" width="240px">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <div class="footer-wrap">
-      <p>PubConf is a project by <a href="http://todd.mn/">Todd H Gardner</a>.</p>
+      <p>Special thanks to <a href="https://twitter.com/westleyl">Liam Westley</a> and <a href="https://twitter.com/jakbradf">Jakob Bradford</a>. PubConf is a project by <a href="http://todd.mn/">Todd H Gardner</a>.</p>
       <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">PubConf</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
       <div style="margin-top:20px;"><img src="img/logo_small_dark.png" alt="PubConf"/></div>
     </div>
@@ -443,29 +601,10 @@
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-68386201-1', 'auto');
   ga('send', 'pageview');
 </script>
 
-<script>
-window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
-
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
-
-  return t;
-}(document, "script", "twitter-wjs"));
-</script>
 </body>
 </html>
