@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PubConf</title>
+  <meta name="description" content="Rapid-fire Ignite talks from inspirational developers in the relaxed atmosphere of The Pepys pub, PubConf will be a uniquely entertaining and insightful event.">
+
+  <link rel="canonical" href="http://pubconf.io/">
+  <link rel="publisher" href="https://plus.google.com/100352791344568085197">
+  <link rel="me" href="https://twitter.com/pubconf">
+
+  <!-- Open Graph Sharing Info -->
+  <meta property="og:title" content="PubConf" />
+  <meta property="og:site_name" content="PubConf"/>
+  <meta property="og:url" content="http://pubconf.io/" />
+  <meta property="og:description" content="Rapid-fire Ignite talks from inspirational developers in the relaxed atmosphere of The Pepys pub, PubConf will be a uniquely entertaining and insightful event." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_UK" />
+  <meta property="article:author" content="https://www.facebook.com/pubconf/" />
+  <meta property="article:publisher" content="https://www.facebook.com/pubconf/" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PubConf">
+  <meta name="twitter:description" content="Rapid-fire Ignite talks from inspirational developers in the relaxed atmosphere of The Pepys pub, PubConf will be a uniquely entertaining and insightful event.">
+  <meta name="twitter:site" content="@pubconf">
+
+  <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAC18PcAAAAAAMfn6wDg+/8AAH3jAADD/wD/fUoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYRERERERZmZmFERERBZmZmYUEUEUFmZmZhQUQUQWZmZmFBRBRBERZmYVFVFVEAAWZhUVUVUREBZmFRVRVRYQFmYVFVFVERAWYhUVUVUQABYjFRVRVRERZiMTMyMzEzZmYhMzMjMTZmZiMyMyMzJmZmYjMjMyNmZmZmIzIzNmZmYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon" />
+  <link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+  <style>
+    /* General Layout */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Oxygen', sans-serif;
+      min-width: 320px;
+      background-color: #222;
+      font-size: 1.0em;
+      line-height: 1.8em;
+    }
+    .wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      color #333;
+      padding: 0 15px;
+    }
+
+    /* Typography */
+    a {
+      color: #FF7461;
+      text-decoration: none;
+      transition: color 300ms ease 0s;
+    }
+    a:hover,a:active,a:focus{
+      color: #FFA69B;
+      text-decoration: underline;
+    }
+    .text-lg { font-size: 1.4em;line-height: 1.4em; }
+    .text-center { text-align: center; }
+    .text-muted { color: #555; }
+    .pull-left {float:left;}
+    .pull-right {float:right;}
+    .button {
+      background-color: #8D1303;
+      color: #eee;
+      padding: 8px 24px;
+      border-radius: 2px;
+      font-weight: 700;
+      border: 1px solid #8D1303;
+      transition: background-color 300ms ease 0s;
+    }
+    .button:hover,
+    .button:active,
+    .button:focus {
+      background-color: #8D1303;
+      color: #eee;
+      text-decoration: none;
+    }
+
+    /* Main Navigation */
+    nav {
+      position: fixed;
+      left: 0;
+      right: 0;
+      background-color: #222;
+      color:#eee;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      display: inline-block;
+      margin: 4px auto;
+      padding: 0
+    }
+    nav li {
+      text-align: center;
+      display: inline;
+      margin:10px 6px;
+      padding: 0;
+    }
+    nav li a { color: #eee;}
+
+    /* Sections */
+    .section-light {
+      background-color: white;
+      width: 100%;
+      padding: 40px 0;
+      color: #222;
+    }
+    .section-decor {
+      box-shadow: inset 0px  8px 8px -5px rgba(0,0,0,0.8),
+                  inset 0px -8px 8px -5px rgba(0,0,0,0.8);
+      background: url(img/bar1.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      width: 100%;
+      padding: 60px 0;
+      color: #eee;
+      font-weight: 700;
+    }
+    .section-hero {
+      padding: 80px 0;
+      text-align: center;
+    }
+    .section-subscribe {
+    }
+    .section-subscribe h2 {
+      margin: 0 0 10px;
+    }
+    .section-subscribe input {
+      display: block;
+      margin: 0 auto 0;
+      width: 240px;
+      font-size: 1.2em;
+      vertical-align: bottom;
+      padding: 4px 10px;
+      border: none;
+      border-radius: 2px;
+    }
+    .section-subscribe input[type=submit] {
+      width: 262px;
+      background-color: #408EA0;
+      border: 1px solid #044757;
+      color: #eee;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+    .section-venue .wrapper { max-width: 720px;}
+    .section-venue .venue-image {
+      float: right;
+    }
+    .section-venue .venue-info {
+      margin-right: 380px;
+      min-height: 360px;
+    }
+    .section-venue .venue-address {
+      margin-top: 30px;
+      line-height: 1.1em;
+    }
+    @media screen and (max-width: 720px) {
+      .section-venue .venue-image,
+      .section-venue .venue-info {
+        margin: 0;
+        min-height: auto;
+        float: none;
+        display: block;
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 360px) {
+      .section-venue .venue-image img {
+        max-width: 100%;
+      }
+    }
+    .section-schedule {
+    }
+    .section-schedule .schedule-wrap {
+      max-width: 480px;
+      margin: 20px auto;
+      border-bottom: 1px solid #FFB061;
+      border-top: 1px solid #FFB061;
+      padding: 10px 0;
+      border-image: linear-gradient(to right,transparent,#FFB061 31.91489%,#FFB061 68.08511%,transparent) 100% 0 100% 0;
+    }
+    .section-schedule .schedule-wrap strong {
+      display: block;
+      margin-left: 80px;
+    }
+    .section-tickets {
+    }
+    .section-tickets .ticket-types {
+      max-width: 640px;
+      margin: 20px auto;
+      border-bottom: 1px solid #FFB061;
+      border-top: 1px solid #FFB061;
+      padding: 10px 0;
+      border-image: linear-gradient(to right,transparent,#FFB061 31.91489%,#FFB061 68.08511%,transparent) 100% 0 100% 0;
+    }
+    .section-tickets .ticket-release {
+      margin: 18px 0;
+    }
+    .section-sponsors {}
+    .section-sponsors .sponsor-wrap {
+      margin-top: 40px;
+    }
+    .section-sponsors .sponsor-wrap:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .section-sponsors .sponsor-wrap .sponsor{
+      float: left;
+      padding-left: 30px;
+      width: -webkit-calc(50% - 30px);
+      width:         calc(50% - 30px);
+    }
+    @media screen and (max-width: 600px) {
+      .section-sponsors .sponsor-wrap .sponsor {
+        margin: 40px 0 0;
+        padding: 0;
+        min-height: auto;
+        float: none;
+        display: block;
+        width: 100%;
+      }
+    }
+
+    /* Talk Lists */
+    .talk-theme-col:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .talk-col-1,
+    .talk-col-2 {
+      float: left;
+      padding-left: 30px;
+      width: -webkit-calc(50% - 30px);
+      width:         calc(50% - 30px);
+    }
+    .talk-col-3 {
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 800px) {
+      .talk-col-1,
+      .talk-col-2,
+      .talk-col-3 {
+        padding-left: 15px;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+    .talk-theme {}
+    .talk-theme h3 {
+      text-align: center;
+      border-bottom: 1px solid #FFB061;
+      padding-bottom: 10px;
+      border-image: linear-gradient(to right,transparent,#FFB061 31.91489%,#FFB061 68.08511%,transparent) 0 0 100% 0;
+    }
+    .talk-theme ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .talk-theme li {
+
+    }
+    .talk-theme img { float: left; border-radius: 50px;}
+    .talk-theme .talk-content { margin-left: 120px; min-height: 120px;}
+    .talk-theme h4 {
+      font-weight: 700;
+      font-size: 1.2em;
+      margin: 0;
+      padding: 0;
+    }
+    .talk-theme h5 {
+      font-weight: 300;
+      font-size: 1.1em;
+      margin: 0;
+      padding: 0;
+    }
+    .talk-theme .talk-desc {
+      line-height: 1em;
+    }
+
+    footer {
+      background-color: #222;
+    }
+    .footer-wrap {
+      max-width: 960px;
+      margin: 0 auto 0;
+      padding: 20px;
+      color: #eee;
+      text-align: center;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    .slide-in {
+      -webkit-animation: slideIn ease 800ms;
+      -moz-animation: slideIn ease 800ms;
+      -ms-animation: slideIn ease 800ms;
+      animation: slideIn ease 800ms;
+    }
+
+    .fade-in {
+      -webkit-animation: fadeIn ease-in 1000ms;
+      -moz-animation: fadeIn ease-in 1000ms;
+      -ms-animation: fadeIn ease-in 1000ms;
+      animation: fadeIn ease-in 1000ms;
+    }
+
+    @-moz-keyframes slideIn {
+        from { opacity: 0; -moz-transform: translateY(20px); }
+        to   { opacity: 1; -moz-transform: translateY(0); }
+    }
+    @-webkit-keyframes slideIn {
+        from { opacity: 0; -webkit-transform: translateY(20px); }
+        to   { opacity: 1; -webkit-transform: translateY(0); }
+    }
+    @-ms-keyframes slideIn {
+        from { opacity: 0; -ms-transform: translateY(20px); }
+        to   { opacity: 1; -ms-transform: translateY(0); }
+    }
+    @keyframes slideIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @-moz-keyframes fadeIn {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+    @-webkit-keyframes fadeIn {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+    @-ms-keyframes fadeIn {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#speakers">Speakers</a></li>
+        <li><a href="#venue">Venue</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#tickets">Tickets</a></li>
+        <li><a href="#sponsors">Sponsors</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section-light section-hero">
+    <div class="wrapper">
+      <a href="/"><img src="img/logo.gif" alt="PubConf" width="320"/></a>
+      <div class="slide-in">
+        <div>
+          <small style="vertical-align:top;font-size:14px;line-height:32px;">at</small>
+          <a href="http://ndc-london.com" target="_blank">
+            <img src="img/ndc-black.png" alt="NDC London" style="max-height:30px;">
+          </a>
+        </div>
+        <div class="text-muted text-lg">January 16, 2016</div>
+        <br>
+        <!-- <div class="text-center text-lg">
+          <a class="button" href="https://www.eventbrite.com/e/pubconf-tickets-19880589378">Get Tickets Now</a>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <section class="section-decor section-about">
+    <div class="wrapper">
+      <div class="fade-in text-center text-lg">Rapid-fire Ignite talks from inspirational developers in the relaxed atmosphere of The Pepys pub, PubConf will be a uniquely entertaining and insightful event. <br><br>You won't want to miss it.</div>
+    </div>
+  </section>
+
+  <section class="section-light section-speakers">
+    <div class="wrapper">
+      <h2 id="speakers" class="text-center" style="margin:6px 0">Speakers and Talks</h2>
+      <div class="text-center text-lg">PubConf's Ignite talks will be presented in a single track, curated on themes relevant to us all: managing yourself today, looking ahead at the future of "Computering", and ranting about broken things.</div>
+
+      <div class="talk-theme-col" style="margin-top: 20px;">
+        <div class="talk-theme talk-col-1">
+          <h3>Managing Yourself</h3>
+          <ul>
+            <li>
+              <img src="img/speakers/calum.jpg" width="100px" height="100px" alt="Calum Gunn">
+              <div class="talk-content">
+                <h4>Coding Music</h4>
+                <h5><a href="http://www.calumgunn.com/">Calum Gunn</a></h5>
+                <div class="talk-desc"><small>Computer musician, specialising in elasticated rave objects</small></div>
+                <div><a href="https://speakerdeck.com/toddhgardner/pubconf-coding-music-by-calum-gunn">Presentation</a></div>
+              </div>
+            </li>
+            <li>
+              <img src="img/speakers/basia.png" width="100px" height="100px" alt="Basia Fusińska">
+              <div class="talk-content">
+                <h4>Conference Talk Contract</h4>
+                <h5><a href="http://barbarafusinska.com">Basia Fusińska</a></h5>
+                <div class="talk-desc"><small>A mentor to aspiring developers.</small></div>
+                <div><a href="https://speakerdeck.com/toddhgardner/pubconf-conference-talk-contract-by-basia-fukinska">Presentation</a></div>
+              </div>
+            </li>
+            <li>
+              <img src="img/speakers/ben.jpg" width="100px" height="100px" alt="Ben Hall">
+              <div class="talk-content">
+                <h4>Learning Patterns for the Overworked Developer</h4>
+                <h5><a href="Katacoda.com">Ben Hall</a></h5>
+                <div class="talk-desc"><small>Founder of Ocelot Uproar, launched Katacoda.</small></div>
+                <div><a href="https://speakerdeck.com/toddhgardner/pubconf-learning-patterns-for-the-overworked-developer-by-ben-hall">Presentation</a></div>
+              </div>
+            </li>
+            <li>
+              <img src="img/speakers/mark.jpg" width="100px" height="100px" alt="Speaker Name">
+              <div class="talk-content">
+                <h4>Being a Programmer is Awesome</h4>
+                <h5><a href="https://blog.markrendle.net/">Mark Rendle</a></h5>
+                <div class="talk-desc"><small>Grand High Mystic Of The Eternal Church Of Made-up Titles</small></div>
+                <div><a href="https://speakerdeck.com/toddhgardner/pubconf-being-a-programmer-is-awesome-by-mark-rendle">Presentation</a></div>
+              </div>
+            </li>
+            <li>
+              <img src="img/speakers/sam.jpg" width="100px" height="100px" alt="Sam Elamin">
+              <div class="talk-content">
+                <h4>Failure is Awesome</h4>
+                <h5><a href="https://twitter.com/samelamin">Sam Elamin</a></h5>
+                <div class="talk-desc"><small>Software Developer at JustEat</small></div>
+                <div>No Presentation :(</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="talk-theme talk-col-2">
+          <h3>The Future of Computering</h3>
+          <ul>
+            <li>
+              <img src="img/speakers/chris.jpg" width="100px" height="100px" alt="Chris Massey">
+              <div class="talk-content">
+                <h4>Seamless Computering</h4>
+                <h5><a href="https://twitter.com/camassey">Chris Massey</a></h5>
+                <div class="talk-desc"><small>Community architect at RedGate</small></div>
+                <div><a href="https://speakerdeck.com/toddhgardner/pubconf-seamless-computering-by-chris-massey">Presentation</a></div>
+              </div>
+            </li>
+            <li>
+              <img src="img/speakers/doug.jpg" width="100px" height="100px" alt="Doug Sillars">
+              <div class="talk-content">
+                <h4>Faster Apps: Why 3G 4G 5G is Not the Solution</h4>
+                <h5><a href="https://twitter.com/dougsillars">Doug Sillars</a></h5>
+                <div class="talk-desc"><small>Leader in mobile performance</small></div>
+                <div><a href="https://speakerdeck.com/toddhgardner/pubconf-faster-apps-why-3g-4g-5g-is-not-the-solution-by-doug-sillars">Presentation</a></div>
+              </div>
+            </li>
+            <li>
+              <img src="img/speakers/liam.jpg" width="100px" height="100px" alt="Liam Westley">
+              <div class="talk-content">
+                <h4>What Is the Point Of Microsoft?</h4>
+                <h5><a href="http://geekswithblogs.net/twickers">Liam Westley</a></h5>
+                <div class="talk-desc"><small>Application Architect at Huddle</small></div>
+                <div><a href="https://speakerdeck.com/toddhgardner/pubconf-what-is-the-point-of-microsoft-by-liam-westley">Presentation</a></div>
+              </div>
+            </li>
+            <li>
+              <img src="img/speakers/dylan.jpg" width="100px" height="100px" alt="Dylan Beattie">
+              <div class="talk-content">
+                <h4>The Face of Things to Come</h4>
+                <h5><a href="http://backstage.spotlight.com/">Dylan Beattie</a></h5>
+                <div class="talk-desc"><small>Lead Developer at Spotlight</small></div>
+                <div><a href="https://vimeo.com/152890042">Video Presentation</a></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="talk-theme talk-col-3">
+        <h3>Everything is Wrong <small class="text-muted"><br>(and nobody cares)</small></h3>
+        <ul>
+          <li>
+            <img src="img/speakers/jimmy.jpg" width="100px" height="100px" alt="Jimmy Bogard">
+            <div class="talk-content">
+              <h4>When You've Fucked Up</h4>
+              <h5><a href="https://lostechies.com/jimmybogard/">Jimmy Bogard</a></h5>
+              <div class="talk-desc"><small>Chief Architect at Headspring</small></div>
+              <div><a href="https://speakerdeck.com/toddhgardner/pubconf-when-youve-fucked-up-by-jimmy-bogard">Presentation</a></div>
+            </div>
+          </li>
+          <li>
+            <img src="img/speakers/ian.jpg" width="100px" height="100px" alt="Ian Cooper">
+            <div class="talk-content">
+              <h4>RPC is Evil</h4>
+              <h5><a href="http://codebetter.com/iancooper/">Ian Cooper</a></h5>
+              <div class="talk-desc"><small>Once corporate, his current version comes complete with beard, tattoos and piercings.</small></div>
+              <div><a href="https://speakerdeck.com/toddhgardner/pubconf-rpc-is-evil-by-ian-cooper">Presentation</a></div>
+            </div>
+          </li>
+          <li>
+            <img src="img/speakers/pete.jpg" width="100px" height="100px" alt="Pete Smith">
+            <div class="talk-content">
+              <h4>The Next Big Thing</h4>
+              <h5><a href="http://beyond-code.com/">Pete Smith</a></h5>
+              <div class="talk-desc"><small>One time he finished something.</small></div>
+              <div><a href="https://speakerdeck.com/toddhgardner/pubconf-the-next-big-thing-by-pete-smith">Presentation</a></div>
+            </div>
+          </li>
+          <li>
+            <img src="img/speakers/sebastien.jpg" width="100px" height="100px" alt="Sebastien Lambla">
+            <div class="talk-content">
+              <h4>The Illogical 17:00 Split</h4>
+              <h5><a href="http://serialseb.com/">Sebastien Lambla</a></h5>
+              <div class="talk-desc"><small>Runs Caffeine IT, a consultancy helping clients across Europe</small></div>
+              <div><a href="https://speakerdeck.com/toddhgardner/pubconf-the-illogical-17-00-split-by-sebastien-lambla">Presentation</a></div>
+            </div>
+          </li>
+          <li>
+            <img src="img/speakers/troy.jpg" width="100px" height="100px" alt="Troy Hunt">
+            <div class="talk-content">
+              <h4>Let's Face It–Security is Pointless</h4>
+              <h5><a href="http://troyhunt.com">Troy Hunt</a></h5>
+              <div class="talk-desc"><small>World-renowned internet security specialist</small></div>
+              <div><a href="https://speakerdeck.com/toddhgardner/pubconf-lets-face-it-security-is-pointless-by-troy-hunt">Presentation</a></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section-decor section-subscribe">
+    <div class="wrapper text-center">
+      <h2 id="subscribe">Don't Miss Out!</h2>
+      <div>Subscribe to our mailing list for updates and ticket releases.</div>
+      <!-- Begin MailChimp Signup Form -->
+      <form style="margin-top:20px" action="https://pubconf.us11.list-manage.com/subscribe/post?u=33d7399517a3ee3a5e9b679f7&amp;id=05e06dc18c" method="post" target="_blank">
+        <div style="position: absolute; left: -5000px;"><input type="text" name="b_33d7399517a3ee3a5e9b679f7_05e06dc18c" tabindex="-1" value=""></div>
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="email address">
+        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+      </form>
+      <!--End mc_embed_signup-->
+    </div>
+  </section>
+
+  <section class="section-light section-venue">
+    <div class="wrapper text-center">
+      <h2 id="venue">Venue</h2>
+      <div class="venue-image">
+        <img src="img/thepepys.jpg" alt="The Pepys" width="360px" height="360px">
+      </div>
+      <div class="venue-info">
+        <h3 class="text-center text-lg">The Pepys</h3>
+        <div class="text-center text-lg">Set in a historic warehouse on the north bank of the Thames, The Pepys is a hidden gem in the heart of the City.</div>
+        <div class="venue-address">
+          The Pepys<br>
+          Stew Lane<br>
+          Off Upper Thames Street<br>
+          London EC4V 3PT<br>
+          <a href="https://www.google.co.uk/maps?f=q&source=s_q&hl=en&geocode&q=The+Samuel+Pepys&sll=51.510408,-0.096259&sspn=0.005716,0.004393&vpsrc=6&ie=UTF8&t=m&z=17&iwloc=A&cid=1223154438194395697">Google Map</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-decor">
+    <div class="wrapper text-center text-lg">
+      Building the developer community<br>
+      one beverage at a time.
+    </div>
+  </section>
+
+  <section class="section-light section-schedule">
+    <div class="wrapper">
+      <h2 id="schedule" class="text-center" style="margin:6px 0">Schedule</h2>
+      <div class="text-center text-lg">PubConf's program will be very open, with plenty of time for discussion and socializing. Have a drink and meet chat about something new.</div>
+
+      <div class="text-lg schedule-wrap">
+        <div>
+          <div class="pull-left">16:00</div>
+          <strong>Doors open, open bar</strong>
+        </div>
+        <div>
+          <div class="pull-left">17:45</div>
+          <strong>Welcome</strong>
+        </div>
+        <div>
+          <div class="pull-left">18:00</div>
+          <strong>Ignite: Managing Yourself</strong>
+        </div>
+        <div>
+          <div class="pull-left">19:00</div>
+          <strong>Ignite: Future of Computering</strong>
+        </div>
+        <div>
+          <div class="pull-left">20:00</div>
+          <strong>Ignite: Everything is Broken</strong>
+        </div>
+        <div>
+          <div class="pull-left">21:00</div>
+          <strong>Ignite: Karaoke</strong>
+        </div>
+        <div>
+          <div class="pull-left">21:30</div>
+          <strong>Thanks and Social Hours</strong>
+        </div>
+        <div>
+          <div class="pull-left">23:00</div>
+          <strong>Closing Time</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-decor">
+    <div class="wrapper text-center text-lg">
+      Not quite a conferece;<br>
+      Not exactly an afterparty;<br>
+      Inspirational conversations with amazing developers.
+    </div>
+  </section>
+
+  <section class="section-light section-tickets">
+    <div class="wrapper">
+      <h2 id="tickets" class="text-center" style="margin:6px 0">Tickets</h2>
+      <div class="text-lg text-center">Thanks to the generosity of our <a href="#sponsors">Sponsors</a>, PubConf is <strong>free</strong>! That's right, free as in beer. Space is limited, and we'll be releasing tickets in batches.</div>
+
+      <br><br><br>
+      <!-- <div class="ticket-types">
+        <div class="pull-right text-muted ticket-release"><strong>Available Now</strong></div>
+        <h3>General Tickets</h3>
+        <div>The final batch of tickets will be released at the Start of the NDC Conference on January 5th. Links will be available here, <a href="https://twitter.com/pubconf">twitter</a>, and the <a href="#subscribe">mailing list</a>.</div>
+        <br>
+        <div class="text-center text-lg">
+          <a class="button" href="https://www.eventbrite.com/e/pubconf-tickets-19880589378">Get Tickets Now</a>
+        </div>
+        <br>
+      </div> -->
+
+      <div class="text-lg text-center">All attendees, speakers, and sponsors at PubConf are required to agree and follow the <a href="http://confcodeofconduct.com/">code of conduct</a>. We will enforce this code throughout the event.</div>
+
+    </div>
+  </section>
+
+  <section class="section-decor section-sponsors">
+    <div class="wrapper text-center">
+      <h2 id="sponsors">Sponsors</h2>
+      <div class="text-center">PubConf is possible thanks to the generosity and expertise of our Sponsors. Please visit them and find out more about their awesomeness.</div>
+
+      <div class="sponsor-wrap">
+        <div class="sponsor">
+          <a href="http://ndc-london.com" target="_blank" style="display:block;margin-top:60px;">
+            <img src="img/ndc.png" alt="NDC London" width="280px">
+          </a>
+        </div>
+        <div class="sponsor">
+          <a href="https://trackjs.com" target="_blank" style="display:block;margin-top:40px;">
+            <img src="img/trackjs.png" alt="TrackJS" width="240px">
+          </a>
+        </div>
+        <div class="sponsor">
+          <a href="https://www.zopa.com" target="_blank">
+            <img src="img/zopa.png" alt="Zopa" width="240px">
+          </a>
+        </div>
+        <div class="sponsor">
+          <a href="https://www.red-gate.com/" target="_blank">
+            <img src="img/redgate.png" alt="Red Gate" width="280px" style="margin-top:20px;">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-wrap">
+      <p>Special thanks to <a href="https://twitter.com/westleyl">Liam Westley</a> and <a href="https://twitter.com/jakbradf">Jakob Bradford</a>. PubConf is a project by <a href="http://todd.mn/">Todd H Gardner</a>.</p>
+      <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">PubConf</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+      <div style="margin-top:20px;"><img src="img/logo_small_dark.png" alt="PubConf"/></div>
+    </div>
+  </footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-68386201-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+</html>
